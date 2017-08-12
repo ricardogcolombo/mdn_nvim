@@ -1,9 +1,11 @@
 {
-  "name": "nvim_mdn",
+  "name": "mdn_nvim",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "babel src --out-dir lib --watch",
+    "build": "babel src --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
