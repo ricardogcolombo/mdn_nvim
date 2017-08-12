@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cd rplugin/node/mdn.nvim && npm install && npm run build
+cd rplugin/node/mdn_nvim && npm install && npm run build
