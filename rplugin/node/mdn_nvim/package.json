@@ -1,13 +1,34 @@
 {
   "name": "mdn_nvim",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+ "dependencies": {
+    "lodash": "^4.13.1",
+    "neovim": "^3.4.5",
+    "update-notifier": "^1.0.2",
+    "vim-syntax-parser": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-regenerator": "^6.14.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "3.19.0",
+    "eslint-plugin-import": "^2.6.1",
+    "prettier": "^1.5.2"
+  },
   "scripts": {
     "dev": "babel src --out-dir lib --watch",
     "build": "babel src --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Ricardo Colombo <ricardogcolombo@gmail.com>",
+  "license": "MIT"
 }
