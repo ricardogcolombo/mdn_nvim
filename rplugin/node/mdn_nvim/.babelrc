@@ -1,0 +1,16 @@
+
+{
+  "presets": [
+    "stage-3",
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+
+  "plugins": [
+    "transform-class-properties",
+    "transform-decorators-legacy"
+  ]
+}
