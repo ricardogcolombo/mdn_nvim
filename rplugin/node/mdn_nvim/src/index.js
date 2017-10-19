@@ -1,16 +1,12 @@
 import {
-    Plugin,
-    Function,
-    AutoCommand,
-    Command
-} from 'neovim/plugin';
-
+  Plugin, Function, Autocmd, Command,
+} from 'neovim';
 
 // If `Plugin` decorator can be called with options
 @Plugin({
     name: 'mdn'
 })
-export default class TestPlugin {
+class mdnPlugin {
     /** nvim is set via host so below is unnecessary **/
     /*
     constructor(nvim) {
@@ -32,6 +28,14 @@ export default class TestPlugin {
         return bufferName;
     }
 
+  @Command('TigrisSSS')
+  async clear() {
+    const buffer = await this.nvim.buffer;
+    this.nvim.outWrite('Clearing\n');
+    buffer.clearHighlight({ srcId: -1 });
+    DEBUG_MAP.clear();
+  }
+
     @Command('UsePromises')
     promiseExample() {
         return this.nvim.buffer.name.then((name) => {
@@ -39,3 +43,5 @@ export default class TestPlugin {
         });
     }
 }
+
+export default mdnPlugin
