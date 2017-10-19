@@ -7,20 +7,6 @@ import {
     name: 'mdn'
 })
 class mdnPlugin {
-    /** nvim is set via host so below is unnecessary **/
-    /*
-    constructor(nvim) {
-      this.nvim = nvim;
-    }
-    */
-
-    @Function('Vsplit', {
-        sync: true
-    })
-    splitMe(args, done) {
-        this.nvim.command('vsplit');
-    }
-
     @Command('LongCommand')
     async longCommand(args) {
         console.log('Output will be routed to $NVIM_NODE_LOG_FILE');
