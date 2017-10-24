@@ -1,5 +1,5 @@
 import {
-  Plugin, Function, Autocmd, Command,
+    Plugin, Function, Autocmd, Command,
 } from 'neovim';
 
 // If `Plugin` decorator can be called with options
@@ -14,17 +14,17 @@ class mdnPlugin {
         return bufferName;
     }
 
-  @Command('TigrisSSS')
-  async clear() {
-    const buffer = await this.nvim.buffer;
-    this.nvim.outWrite('Clearing\n');
-    buffer.clearHighlight({ srcId: -1 });
-    DEBUG_MAP.clear();
-  }
+    @Command('TigrisSSS')
+    async clear() {
+        const buffer = await this.nvim.buffer;
+        this.nvim.outWrite('Clearing\n');
+        buffer.clearHighlight({ srcId: -1 });
+        DEBUG_MAP.clear();
+    }
 
     @Command('UsePromises')
     promiseExample() {
-        return this.nvim.buffer.name.then((name) => {
+        return this.nvim.buffer.insert(['test','test2'],2).then((buff) => {
             console.log(`Current buffer name is ${name}`);
         });
     }
